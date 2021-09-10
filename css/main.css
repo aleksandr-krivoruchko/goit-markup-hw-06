@@ -62,7 +62,7 @@ a {
   margin: 0 auto;
 }
 
-/* .....Общий стиль секциям и заголовкам..... */
+/* .....Общий стиль секциям и заголовкам, кнопке..... */
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -83,6 +83,23 @@ a {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+}
+
+.btn {
+  min-width: 200px;
+  height: 50px;
+  color: var(--main-bg-color);
+  background-color: var(--accent-color);
+  letter-spacing: 0.06em;
+  border: 0 solid transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn:hover,
+.btn:focus {
+  background-color: #188ce8;
 }
 
 /*                   !H E A D E R                    */
@@ -228,26 +245,6 @@ a {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-.hero-button {
-  min-width: 200px;
-  height: 50px;
-  padding: 10px 32px;
-  color: var(--main-bg-color);
-  background-color: var(--accent-color);
-  letter-spacing: 0.06em;
-  border: 0 solid transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  cursor: pointer;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero-button:hover,
-.hero-button:focus {
-  background-color: #188ce8;
 }
 
 /*              Features                  */
@@ -588,7 +585,6 @@ a {
 }
 
 .address {
-  margin-right: 70px;
   color: #ffffff;
   font-style: normal;
   font-size: 14px;
@@ -606,6 +602,7 @@ a {
 
 .attachment {
   padding-top: 12px;
+  margin-left: auto;
 }
 
 .attachment p {
@@ -638,6 +635,47 @@ a {
 .attachment-list .social-link:hover,
 .attachment-list .social-link:focus {
   background-color: var(--accent-color);
+}
+
+/* Ф О Р М А  в футере*/
+
+.subscription {
+  margin-left: auto;
+  padding-top: 12px;
+}
+.subscription b {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.71px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.subscription-form {
+  margin-top: 20px;
+}
+.subscription-form input {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding-left: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: transparent;
+  color: #ffffff;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscription-form input:focus {
+  border-color: #ffffff;
+  outline: none;
+}
+
+.subscription .icon {
+  fill: #ffffff;
+  margin-left: 10px;
+  vertical-align: middle;
 }
 
 /* *МОДАЛЬНОЕ  ОКНО* */
@@ -691,9 +729,136 @@ a {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  cursor: pointer;
 }
 
-.modal-btn:hover,
-.modal-btn:focus {
-  border: 1px solid var(--accent-color);
+.modal-btn:hover > .icon,
+.modal-btn:focus > .icon {
+  fill: var(--accent-color);
+}
+.modal label {
+  display: block;
+}
+/* ...Ф О Р М А  модального окна... */
+
+.form {
+  width: 448px;
+  padding-top: 40px;
+  margin: 0 auto;
+}
+
+.form p {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+
+.form-field {
+  width: 448px;
+  margin-bottom: 10px;
+  position: relative;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field label {
+  margin-bottom: 4px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--main-text-color);
+}
+
+.form-field .icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+}
+
+.form-field:focus-within {
+  fill: var(--accent-color);
+}
+
+.form-field input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 42px;
+  font-size: 14px;
+  line-height: 1.14;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field input:focus {
+  border-color: #2196f3;
+  outline: none;
+}
+
+.form-field textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.14;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-field textarea:focus {
+  border-color: #2196f3;
+  outline: none;
+}
+
+.form-field textarea::placeholder {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+/* CHECKBOX */
+
+.checkbox {
+  position: relative;
+  margin-bottom: 30px;
+}
+.checkbox label {
+  padding-left: 36px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+.checkbox a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.icon-check {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 13px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 3px;
+}
+.check:checked + .icon-check {
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.submit-btn {
+  display: block;
+  margin: 0 auto;
 }
